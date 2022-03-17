@@ -1,0 +1,408 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: "Baskerville BT";
+  src: url("./assets/fonts/BaskervilleBT-BoldItalic.woff2") format("woff2"),
+    url("./assets/fonts/BaskervilleBT-BoldItalic.woff") format("woff");
+  font-weight: bold;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Baskerville BT";
+  src: url("./assets/fonts/BaskervilleBT-Bold.woff2") format("woff2"),
+    url("./assets/fonts/BaskervilleBT-Bold.woff") format("woff");
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Baskerville BT";
+  src: url("./assets/fonts/BaskervilleBT-Roman.woff2") format("woff2"),
+    url("./assets/fonts/BaskervilleBT-Roman.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Baskerville BT";
+  src: url("./assets/fonts/BaskervilleBT-Italic.woff2") format("woff2"),
+    url("./assets/fonts/BaskervilleBT-Italic.woff") format("woff");
+  font-weight: normal;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Baskerville";
+  src: url("./assets/fonts/BaskervilleLight.woff2") format("woff2"),
+    url("./assets/fonts/BaskervilleLight.woff") format("woff");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Baskerville";
+  src: url("./assets/fonts/BaskervilleLight-Italic.woff2") format("woff2"),
+    url("./assets/fonts/BaskervilleLight-Italic.woff") format("woff");
+  font-weight: 300;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Baskerville";
+  src: url("./assets/fonts/Baskerville-Normal.woff2") format("woff2"),
+    url("./assets/fonts/Baskerville-Normal.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Baskerville";
+  src: url("./assets/fonts/Baskerville-LightA.woff2") format("woff2"),
+    url("./assets/fonts/Baskerville-LightA.woff") format("woff");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Baskerville";
+  src: url("./assets/fonts/BaskervilleBold.woff2") format("woff2"),
+    url("./assets/fonts/BaskervilleBold.woff") format("woff");
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Baskerville BT";
+  src: url("./assets/fonts/BaskervilleBT-Bold.woff2") format("woff2"),
+    url("./assets/fonts/BaskervilleBT-Bold.woff") format("woff");
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Baskerville";
+  src: url("./assets/fonts/Baskerville.woff2") format("woff2"),
+    url("./assets/fonts/Baskerville.woff") format("woff");
+  font-weight: 100;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Baskerville";
+  src: url("./assets/fonts/BaskervilleBold.woff2") format("woff2"),
+    url("./assets/fonts/BaskervilleBold.woff") format("woff");
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+.container {
+  max-width: 1800px !important;
+  padding-left: 30px !important;
+  padding-right: 30px !important;
+  margin-left: auto;
+  margin-right: auto;
+}
+.swiper-button-prev:after,
+.swiper-button-next:after {
+  content: none !important;
+}
+.swiper-button-next.swiper-button-disabled,
+.swiper-button-prev.swiper-button-disabled {
+  opacity: 1 !important;
+}
+.swiper {
+  margin-left: 100px !important;
+  margin-right: 100px !important;
+}
+.swiper-button-next,
+.swiper-button-prev {
+  top: 40% !important;
+}
+@media (max-width: 1536px) {
+  .swiper {
+    margin-left: 63px !important;
+    margin-right: 63px !important;
+  }
+}
+@media (max-width: 576px) {
+  .swiper {
+    margin-left: 35px !important;
+    margin-right: 35px !important;
+  }
+  .swiper-button-next {
+    right: 0px !important;
+  }
+  .swiper-button-next img {
+    width: 15px;
+  }
+  .swiper-button-prev {
+    left: 0px !important;
+  }
+  .swiper-button-prev img {
+    width: 15px;
+  }
+}
+
+.dropdown-container {
+  padding-left: 24px;
+  padding-right: 24px;
+}
+
+.swiper-button-next-popup,
+.swiper-button-prev-popup {
+  top: 40% !important;
+}
+
+/* ---------------------------- */
+
+#number {
+  width: 3em;
+}
+
+/* ---------------------------- */
+
+.overlay {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.7);
+  transition: opacity 500ms;
+  visibility: hidden;
+  opacity: 0;
+}
+.overlay:target {
+  visibility: visible;
+  opacity: 1;
+}
+
+.popup {
+  margin: 10px auto;
+  padding: 20px;
+  background: #fff;
+  border-radius: 5px;
+  width: 90%;
+  position: relative;
+  transition: all 5s ease-in-out;
+}
+
+.popup h2 {
+  margin-top: 0;
+  color: #333;
+  font-family: Tahoma, Arial, sans-serif;
+}
+.popup .close {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  transition: all 200ms;
+  font-size: 30px;
+  font-weight: bold;
+  text-decoration: none;
+  color: #333;
+}
+.popup .close:hover {
+  color: #06d85f;
+}
+.popup .content {
+  overflow: auto;
+}
+
+@media screen and (max-width: 700px) {
+  .box {
+    width: 70%;
+  }
+  .popup {
+    width: 90%;
+  }
+}
+
+/* dropdown menu  */
+
+/* Style the button that is used to open and close the collapsible content */
+.collapsible {
+  background-color: #fff;
+  cursor: pointer;
+  width: 100%;
+  text-align: left;
+  outline: none;
+  font-size: 15px;
+}
+
+/* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
+.active,
+.collapsible:hover {
+  background-color: #fff;
+}
+
+/* Style the collapsible content. Note: hidden by default */
+.content {
+  display: none;
+  overflow: hidden;
+  background-color: #fff;
+  transition: 0 0.2s ease-out;
+}
+
+/* .collapsible:after {
+  content: "\02795"; 
+  font-size: 13px;
+  color: white;
+  float: right;
+  margin-left: 5px;
+}
+
+.active:after {
+  content: "\2796"; 
+} */
+
+input[type="range"] {
+  height: 38px;
+  -webkit-appearance: none;
+  margin: 10px 0;
+  width: 100%;
+}
+input[type="range"]:focus {
+  outline: none;
+}
+input[type="range"]::-webkit-slider-runnable-track {
+  width: 100%;
+  height: 10px;
+  cursor: pointer;
+  box-shadow: 1px 1px 1px #000000;
+  background: white;
+  border-radius: 5px;
+}
+input[type="range"]::-webkit-slider-thumb {
+  box-shadow: 1px 1px 1px #000000;
+  border: 1px solid #000000;
+  height: 30px;
+  width: 30px;
+  border-radius: 50%;
+  background: #d3c8a0;
+  cursor: pointer;
+  -webkit-appearance: none;
+  margin-top: -11px;
+}
+input[type="range"]:focus::-webkit-slider-runnable-track {
+  background: white;
+}
+input[type="range"]::-moz-range-track {
+  width: 100%;
+  height: 1px;
+  cursor: pointer;
+  box-shadow: 1px 1px 1px #000000;
+  background: white;
+  border-radius: 5px;
+}
+input[type="range"]::-moz-range-thumb {
+  box-shadow: 1px 1px 1px #000000;
+  border: 1px solid #000000;
+  height: 30px;
+  width: 15px;
+  border-radius: 5px;
+  background: #ffffff;
+  cursor: pointer;
+}
+input[type="range"]::-ms-track {
+  width: 100%;
+  height: 10px;
+  cursor: pointer;
+  background: transparent;
+  border-color: transparent;
+  color: transparent;
+}
+input[type="range"]::-ms-fill-lower {
+  background: white;
+  border-radius: 10px;
+  box-shadow: 1px 1px 1px #000000;
+}
+input[type="range"]::-ms-fill-upper {
+  background: white;
+  border-radius: 10px;
+  box-shadow: 1px 1px 1px #000000;
+}
+input[type="range"]::-ms-thumb {
+  margin-top: 1px;
+  box-shadow: 1px 1px 1px #000000;
+  border: 1px solid #000000;
+  height: 30px;
+  width: 15px;
+  border-radius: 5px;
+  background: #ffffff;
+  cursor: pointer;
+}
+input[type="range"]:focus::-ms-fill-lower {
+  background: white;
+}
+input[type="range"]:focus::-ms-fill-upper {
+  background: white;
+}
+
+.swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  background: #fff;
+
+  /* Center slide text vertically */
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+}
+
+.swiper-container .swiper-zoom-container > img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  object-position: center;
+}
+
+.sign-popup {
+  margin: 10px auto;
+  padding: 20px;
+  background: #fff;
+  border-radius: 5px;
+  width: 90%;
+  position: relative;
+  transition: all 5s ease-in-out;
+}
+
+.sign-popup .close {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  transition: all 200ms;
+  font-size: 30px;
+  font-weight: bold;
+  text-decoration: none;
+  color: #333;
+}
+
+.sign-in-container {
+  padding-left: 45px;
+  padding-right: 45px;
+}
